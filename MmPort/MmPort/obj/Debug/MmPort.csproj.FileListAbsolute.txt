@@ -1,0 +1,6 @@
+G:\dotnet\mm-port\MmPort\MmPort\bin\Debug\MmPort.dll
+G:\dotnet\mm-port\MmPort\MmPort\bin\Debug\MmPort.pdb
+G:\dotnet\mm-port\MmPort\MmPort\obj\Debug\MmPort.csprojAssemblyReference.cache
+G:\dotnet\mm-port\MmPort\MmPort\obj\Debug\MmPort.csproj.CoreCompileInputs.cache
+G:\dotnet\mm-port\MmPort\MmPort\obj\Debug\MmPort.dll
+G:\dotnet\mm-port\MmPort\MmPort\obj\Debug\MmPort.pdb
