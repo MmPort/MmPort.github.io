@@ -5,11 +5,7 @@ using System.Text;
 
 namespace MmPort
 {
-    public enum COMMUNICATION_TYPE:int
-    {
-        SerialPort=10000,
-        Modbus=10001
-    }
+
 
 
     public class MmUtils

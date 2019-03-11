@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
@@ -57,7 +58,7 @@ namespace MmPort
         /// <summary>
         /// 通信方式
         /// </summary>
-        public COMMUNICATION_TYPE communicationType { get; set; }
+        public Common.CommunicationType communicationType { get; set; }
 
         public MmConfiguration()
         {

@@ -39,13 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MmDataReceiveHander.cs" />
-    <Compile Include="MmConfiguration.cs" />
+    <Compile Include="MmPort.cs" />
+    <Compile Include="AbstractFactory\MmPortFactory.cs" />
+    <Compile Include="enums\Common.cs" />
+    <Compile Include="CustomException\MmException.cs" />
     <Compile Include="MmModbus.cs" />
     <Compile Include="MmSerialPort.cs" />
-    <Compile Include="MmUtils.cs" />
-    <Compile Include="MmPortManager.cs" />
+    <Compile Include="AbstractFactory\ModBusAbstractFactory.cs" />
+    <Compile Include="AbstractFactory\SerialPortAbstractFactory.cs" />
+    <Compile Include="hander\MmDataReceiveHander.cs" />
+    <Compile Include="config\MmConfiguration.cs" />
+    <Compile Include="utils\MmUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
