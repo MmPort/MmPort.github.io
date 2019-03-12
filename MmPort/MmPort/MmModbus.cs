@@ -32,12 +32,12 @@ namespace MmPort
         private byte ucCRCLo = 0xFF;
         private bool IsReturn = false;//串口返回数据
 
-        public  void addDataReceiveHander(MmDataReceiveHander hander)
+        public override void addDataReceiveHander(MmDataReceiveHander hander)
         {
             updateModbusData += hander.dataReceive;
         }
 
-        public  void setConfig(Common.CommunicationType tYPE,MmConfiguration mmConfiguration)
+        public override void setConfig(Common.CommunicationType tYPE,MmConfiguration mmConfiguration)
         {
             if (tYPE == Common.CommunicationType.Modbus)
             {

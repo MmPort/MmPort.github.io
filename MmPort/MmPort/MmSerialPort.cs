@@ -6,17 +6,17 @@ using System.Text;
 
 namespace MmPort
 { 
-    public class MmSerialPort : MmPort
+    public  class MmSerialPort : MmPort
     {
 
         public event UpdateData update;
 
-        public  void addDataReceiveHander(MmDataReceiveHander hander)
+        public override  void addDataReceiveHander(MmDataReceiveHander hander)
         {
             update += hander.dataReceive;
         }
 
-        public  void setConfig(Common.CommunicationType tYPE,MmConfiguration mmConfiguration)
+        public override void setConfig(Common.CommunicationType tYPE,MmConfiguration mmConfiguration)
         {
             throw new NotImplementedException();
         }

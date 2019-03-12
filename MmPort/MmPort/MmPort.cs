@@ -7,7 +7,7 @@ using System.Text;
 
 namespace MmPort
 {
-    public  class MmPort
+    public abstract class MmPort
     {
         public SerialPort mmPort;
 
@@ -19,5 +19,8 @@ namespace MmPort
             mmPort = new SerialPort();
         }
 
+        public abstract void addDataReceiveHander(MmDataReceiveHander hander);
+
+        public abstract void setConfig(Common.CommunicationType tYPE, MmConfiguration mmConfiguration);
     }
 }
