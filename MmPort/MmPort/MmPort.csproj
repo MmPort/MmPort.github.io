@@ -49,9 +49,9 @@
     <Compile Include="AbstractFactory\SerialPortAbstractFactory.cs" />
     <Compile Include="hander\MmDataReceiveHander.cs" />
     <Compile Include="config\MmConfiguration.cs" />
+    <Compile Include="MmSPTimeOut.cs" />
     <Compile Include="utils\MmUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaitRec.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
