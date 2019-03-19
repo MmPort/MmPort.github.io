@@ -49,7 +49,6 @@
     <Compile Include="AbstractFactory\SerialPortAbstractFactory.cs" />
     <Compile Include="hander\MmDataReceiveHander.cs" />
     <Compile Include="config\MmConfiguration.cs" />
-    <Compile Include="MmSPTimeOut.cs" />
     <Compile Include="utils\MmUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
