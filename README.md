@@ -32,7 +32,7 @@ MmModbus mmModbus mmModbus =(MmModbus) modBusAbstractFactory.creatMmPort();//获
 MmConfiguration mmConfiguration = new MmConfiguration("COM3",9600);//实例化配置类
 mmModbus.setConfig(Common.CommunicationType.Modbus, mmConfiguration);//设置配置信息
 mmModbus.openPort();//打开串口
-mmModbus.addDataReceiveHander(new myDataReceiveHander());//添加串口接受数据的自定义hander。
+mmModbus.addDataReceiveHandler(new myDataReceiveHandler());//添加串口接受数据的自定义handler。
 
 //示例
 byte[] data = mmModbus.ReadKeepReg(18, 19, 1);//向编号为18的modbus设备的20号寄存器获取1个字节的数据。

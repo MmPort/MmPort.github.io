@@ -19,7 +19,7 @@ namespace MmPort
             mmPort = new SerialPort();
         }
 
-        public abstract void addDataReceiveHander(MmDataReceiveHander hander);
+        public abstract void addDataReceiveHander(MmDataReceiveHandler hander);
 
         public abstract void setConfig(Common.CommunicationType tYPE, MmConfiguration mmConfiguration);
     }

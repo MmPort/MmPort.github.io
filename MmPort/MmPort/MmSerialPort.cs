@@ -11,7 +11,7 @@ namespace MmPort
 
         public event UpdateData update;
 
-        public override  void addDataReceiveHander(MmDataReceiveHander hander)
+        public override  void addDataReceiveHander(MmDataReceiveHandler hander)
         {
             update += hander.dataReceive;
         }
@@ -94,6 +94,7 @@ namespace MmPort
         /// </summary>
         private void initData()
         {
+
             timerTOA = new System.Timers.Timer();
             timerTOA.Interval = resendSeconds; //100ms超时      
             timerTOA.AutoReset = false;
