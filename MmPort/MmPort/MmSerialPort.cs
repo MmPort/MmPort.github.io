@@ -194,7 +194,7 @@ namespace MmPort
                 if (mmPort.BytesToRead > 0)
                 {
                     mmPort.Read(buff,0,mmPort.BytesToRead);
-                   update(buff);
+                    update(buff);
                 }
 
             }

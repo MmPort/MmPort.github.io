@@ -47,7 +47,7 @@
     <Compile Include="MmSerialPort.cs" />
     <Compile Include="AbstractFactory\ModBusAbstractFactory.cs" />
     <Compile Include="AbstractFactory\SerialPortAbstractFactory.cs" />
-    <Compile Include="hander\MmDataReceiveHander.cs" />
+    <Compile Include="handler\MmDataReceiveHandler.cs" />
     <Compile Include="config\MmConfiguration.cs" />
     <Compile Include="utils\MmUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

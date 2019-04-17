@@ -31,6 +31,7 @@ namespace MmPort
         private byte ucCRCHi = 0xFF;
         private byte ucCRCLo = 0xFF;
         private bool IsReturn = false;//串口返回数据
+        private object syncObject = new object();//锁对象
 
         public override void addDataReceiveHander(MmDataReceiveHandler hander)
         {
@@ -106,6 +107,16 @@ namespace MmPort
         }
 
 
+        public void SyncWtire(byte[] buffer, int offset, int count)
+        {
+            lock (syncObject)
+            {
+                mmPort.Write(buffer, offset, count);
+                Thread.Sleep(10);
+            }
+           
+        }
+
         #region 读保持寄存器  功能码03
         // MODBUS读保持寄存器 iAddress 开始地址(0开始),iLength 寄存器数量
         //主站请求：01 03 00 00 00 06 70 08
@@ -135,7 +146,7 @@ namespace MmPort
             try
             {
                 //发送指令
-                mmPort.Write(SendCommand, 0, 8);
+                SyncWtire(SendCommand, 0, 8);
             }
             catch
             {
@@ -189,7 +200,7 @@ namespace MmPort
             try
             {
                 //发送指令。
-                mmPort.Write(SendCommand, 0, 8);
+                SyncWtire(SendCommand, 0, 8);
             }
             catch (Exception)
             {
@@ -241,7 +252,7 @@ namespace MmPort
             try
             {
                 //发送指令。
-                mmPort.Write(SendCommand, 0, 8);
+                SyncWtire(SendCommand, 0, 8);
                 Thread.Sleep(100);
             }
             catch
@@ -288,7 +299,7 @@ namespace MmPort
             try
             {
                 //发送指令。
-                mmPort.Write(SendCommand, 0, 8);
+                SyncWtire(SendCommand, 0, 8);
                 Thread.Sleep(100);
             }
             catch (Exception)
@@ -342,7 +353,7 @@ namespace MmPort
             //发送指令。
             try
             {
-                mmPort.Write(SendCommand, 0, 8);
+                SyncWtire(SendCommand, 0, 8);
                 Thread.Sleep(100);
             }
             catch (Exception ex)
@@ -410,7 +421,7 @@ namespace MmPort
             try
             {
                 //发送指令。
-                mmPort.Write(SendCommand, 0, 13);
+                SyncWtire(SendCommand, 0, 13);
                 Thread.Sleep(200);
             }
             catch (Exception)
